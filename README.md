@@ -1,6 +1,6 @@
-# **Cinematic Pulse: Predicting IMDb Ratings**
+# **Cinematic Pulse: Predicting IMDb Ratings** :movie_camera:
 
-<img width="996" alt="image" src="https://github.com/user-attachments/assets/572e961f-8e9c-4b8d-b815-c8bf7d4a8173">
+<img width="996" alt="image" src="https://github.com/user-attachments/assets/572e961f-8e9c-4b8d-b815-c8bf7d4a8173">  
 
 
 An ML project that predicts IMDb ratings based on various cinematic features like genres, content types, and more. This tool analyzes historical movie data and provides insights to filmmakers and data enthusiasts about expected audience reception.
@@ -23,25 +23,52 @@ An ML project that predicts IMDb ratings based on various cinematic features lik
 
 ---
 
-## **Project Files and Structure**
+## :open_file_folder: **Project Files and Structure**
 
-#### **Main Files**:
-- `Final_python.ipynb`: The Jupyter notebook containing all the code for data preprocessing, model training, and evaluation.
-- `Cinematic_Pulse1.db`: SQLite database used for storing and retrieving movie data.
-- `Normalised1.db`: Another SQLite database used for normalized data.
-- `titles.csv` & `titles.tsv`: Datasets containing movie titles and metadata for prediction.
+#### 1. **`Final_python.ipynb`**:
+- This is the Jupyter Notebook that contains the primary codebase for the project.
+- It handles tasks such as:
+  - Reading data from CSV/TSV files.
+  - Loading and querying SQLite databases (`Cinematic_Pulse1.db`, `Normalised1.db`).
+  - Data preprocessing, such as feature engineering and handling missing data.
+  - Training machine learning models such as Linear Regression, Random Forest, and Gradient Boosting.
+  - Visualizing the results using `matplotlib` and `seaborn`.
 
-#### **Directory Structure**:
+#### 2. **`Cinematic_Pulse1.db`**:
+- This SQLite database contains raw movie data extracted from the `titles.tsv` file.
+- It serves as the main data source for querying movie-related information such as IMDb ID, scores, runtime, etc.
 
-  . Cinematic-Pulse
+#### 3. **`Normalised1.db`**:
+- A normalized version of the movie data stored in `Cinematic_Pulse1.db`.
+- This database contains cleaned and processed data for use in machine learning tasks.
+- It includes tables like `Media`, `IMDb`, `Season`, `Genre`, and `GenreSplit` that are used for model training and querying.
+
+#### 4. **`titles.csv`**:
+- A CSV file containing movie metadata, including titles, types (e.g., movie or TV show), release year, runtime, genres, and IMDb scores.
+- Used as an input source for extracting features for the project.
+
+#### 5. **`titles.tsv`**:
+- A TSV (Tab-Separated Values) file similar to `titles.csv`, containing metadata about movies.
+- It may include different formatting or additional columns compared to the CSV version.
+
+#### 6. **`requirements.txt`**:
+- This file contains a list of all the Python libraries required to run the project.
+
+
+### **Directory Structure**:
+```
+  . Cinematic-Pulse-Gauging-IMDB-Ratings
     ├── Final_python.ipynb
     ├── Cinematic_Pulse1.db
     ├── Normalised1.db
     ├── titles.csv
     ├── titles.tsv
-    ├── requirements.txt
+    └── requirements.txt
+```
 
-## **Installation Instructions**
+
+
+## :gear: **Installation Instructions**
 
 ### **Prerequisites**:
 - Python 3.8 or higher
@@ -68,10 +95,10 @@ An ML project that predicts IMDb ratings based on various cinematic features lik
    Launch the `Final_python.ipynb` file to run the code and see step-by-step outputs.
 
 
-## Running the Code  
+## :arrows_clockwise: Running the Code - What will you find?
 
 1. **Data Preprocessing**:
-> The first section of the notebook handles the extraction and cleaning of the movie data from the databases and `.csv/.tsv` files. This includes:
+> The first section of the notebook handles the extraction and cleaning of the movie data from the databases and `.tsv` files. This includes:
 > Loading the movie titles and associated metadata from the provided datasets.
 > Handling missing values, encoding categorical features, and normalizing data where necessary.
 2. **Feature Engineering**:  
@@ -90,7 +117,7 @@ An ML project that predicts IMDb ratings based on various cinematic features lik
 > After making predictions, the results are visualized using Seaborn and Matplotlib. 
 
 
-## Technologies Used  
+## :technologist: Technologies Used  
 - Languages: `Python`
 - Libraries:
   - Data Handling: `pandas`, `numpy`
